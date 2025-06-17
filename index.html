@@ -1,18 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargando Panel GYM...</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Variables CSS para colores (tomadas de tu form_styles.css para consistencia) */
+        :root {
+            --primary-color: #e94560; /* Color principal para botones y degradados (rojo GYM) */
+            --background-dark: #000000; /* Fondo oscuro del GYM */
+            --text-light: #FFFFFF; /* Color de texto claro */
+            --spinner-border-color: rgba(255, 255, 255, 0.3); /* Un blanco semitransparente para el borde del spinner */
+        }
 
-    <title>Landing Page --GYM--</title>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-dark); /* Fondo oscuro del GYM */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Montserrat', sans-serif; /* Usamos la misma fuente de tu login */
+            color: var(--text-light); /* Texto claro */
+            overflow: hidden; /* Para evitar barras de desplazamiento */
+        }
+
+        .loader {
+            text-align: center;
+            /* Mejoras de apariencia para el contenedor del loader */
+            background-color: rgba(0, 0, 0, 0.2); /* Fondo sutil para el loader */
+            padding: 40px 60px; /* Más padding para que respire */
+            border-radius: 15px; /* Bordes redondeados */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Sombra suave */
+            opacity: 0; /* Inicialmente oculto para animación de aparición */
+            animation: fadeInScale 1s ease-out forwards; /* Animación de aparición con escala */
+        }
+
+        .loader span {
+            display: block;
+            font-size: 24px; /* Un poco más grande */
+            margin-top: 20px; /* Más espacio */
+            color: var(--text-light); /* Texto blanco */
+            font-weight: 500; /* Un poco más de grosor */
+            letter-spacing: 0.5px; /* Pequeño espaciado entre letras */
+        }
+
+        /* Usaremos un icono de Font Awesome en lugar del spinner CSS tradicional para mejor estética */
+        .spinner {
+            /* Ocultamos el spinner CSS original si usamos icono */
+            display: none; 
+        }
+
+        /* Nuevo estilo para el icono animado */
+        .loader-icon {
+            font-size: 70px; /* Tamaño más grande para el icono */
+            color: var(--primary-color); /* Color rojo del GYM */
+            animation: spin 1.5s linear infinite, bounce 0.8s ease-in-out infinite alternate; /* Animación de giro y rebote */
+            display: inline-block; /* Para aplicar transformaciones correctamente */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); } /* Sutil rebote hacia arriba */
+            100% { transform: translateY(0); }
+        }
+
+        /* Opcional: animación de puntos para el mensaje */
+        .dots::after {
+            content: '';
+            animation: dots 1.5s steps(3, end) infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { content: ' .'; }
+            40% { content: ' ..'; }
+            60% { content: ' ...'; }
+            80%, 100% { content: ''; } /* Desaparece para reiniciar el ciclo */
+        }
+
+        /* Animación para que el loader completo aparezca con un efecto de escala */
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenido al recibidor</h1>
-    <p>Haz clic en el botón para ir a la siguiente página;</p>
-    
-    <a href="HTML/login.html">Login</a>
 
+<div class="loader">
+    <i class="fas fa-dumbbell loader-icon"></i> 
+    <span>Cargando Panel GYM<span class="dots"></span></span>
+</div>
 
+<script>
+    // Redirige después de 3 segundos a login.html
+    // Asegúrate de que esta ruta sea correcta para tu proyecto
+    setTimeout(function() {
+        window.location.href = 'HTML/login.html';
+    }, 3000);
+</script>
 
 </body>
 </html>
