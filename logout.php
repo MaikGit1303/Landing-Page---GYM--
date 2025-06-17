@@ -1,11 +1,11 @@
 <?php
-session_start(); // Inicia la sesión
+session_start(); 
 
-$_SESSION = array(); // Vacía todas las variables de sesión
+$_SESSION = array(); 
 
-session_destroy(); // Destruye la sesión actual
+session_destroy(); 
 
-// Redirige al login.php, que está en la carpeta HTML/
+
 header("location: HTML/login.php"); 
 exit;
 ?>
