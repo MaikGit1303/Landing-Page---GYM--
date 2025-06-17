@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control GYM</title>
+    <link rel="stylesheet" href="../CSS/panel/panel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-dumbbell"></i>
+                <h2>LANDING-PAGE-GYM</h2>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Miembros</a></li>
+                    <li><a href="#"><i class="fas fa-running"></i> Actividades</a></li>
+                    <li><a href="#"><i class="fas fa-weight-lifting"></i> Equipos</a></li>
+                    <li><a href="#"><i class="fas fa-cogs"></i> Ajustes</a></li>
+                    <li><a href="#"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>&copy; 2025 GYM-Dash</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="dashboard-header">
+                <h1>Panel General de Rendimiento</h1>
+                <div class="user-profile">
+                    <span>Hola, Entrenador!</span>
+                    <img src="https://via.placeholder.com/40" alt="Avatar de usuario">
+                </div>
+            </header>
+
+            <section class="overview-cards">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-users"></i></div>
+                    <div class="card-content">
+                        <h3>Miembros Activos</h3>
+                        <p class="metric-value">1,250</p>
+                        <span class="change positive"><i class="fas fa-arrow-up"></i> 5% este mes</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-dumbbell"></i></div>
+                    <div class="card-content">
+                        <h3>Clases Reservadas</h3>
+                        <p class="metric-value">4,800</p>
+                        <span class="change positive"><i class="fas fa-arrow-up"></i> 8% más</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-heartbeat"></i></div>
+                    <div class="card-content">
+                        <h3>Horas de Entrenamiento</h3>
+                        <p class="metric-value">9,200 hrs</p>
+                        <span class="change negative"><i class="fas fa-arrow-down"></i> 2% menos</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <div class="card-content">
+                        <h3>Ingresos Mensuales</h3>
+                        <p class="metric-value">$120,000</p>
+                        <span class="change positive"><i class="fas fa-arrow-up"></i> 10% de meta</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="charts-section">
+                <div class="chart-card large">
+                    <h2>Progreso de Miembros (Anual)</h2>
+                    <div class="placeholder-chart">Gráfico de líneas aquí (ej. con Chart.js)</div>
+                </div>
+                <div class="chart-card small">
+                    <h2>Uso de Equipos</h2>
+                    <div class="placeholder-chart">Gráfico de pastel/barras aquí</div>
+                </div>
+                <div class="chart-card small">
+                    <h2>Miembros Nuevos</h2>
+                    <div class="placeholder-chart">Gráfico de barras aquí</div>
+                </div>
+            </section>
+
+            <section class="recent-activity">
+                <h2>Actividad Reciente</h2>
+                <ul class="activity-list">
+                    <li><span class="timestamp">10:05 AM</span> <span class="activity-text">María G. reservó clase de Yoga.</span></li>
+                    <li><span class="timestamp">09:30 AM</span> <span class="activity-text">Nuevo miembro: Juan P.</span></li>
+                    <li><span class="timestamp">08:45 AM</span> <span class="activity-text">Mantenimiento de cinta de correr #3.</span></li>
+                    <li><span class="timestamp">Ayer 18:00</span> <span class="activity-text">Se completó el pago de membresía de Ana L.</span></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script src="../Js/login.js"></script>
+</body>
+</html>
